@@ -3,7 +3,7 @@ package cn.dokky.OSTest;
 
 public class PCB
 {
-    private String name;       //进程名
+    private int name;       //进程名
     private int priority;    //优先数
     private int total_time;  //进程需要运行的时间
     private int cpu_time;    //占用CPU的时间
@@ -13,13 +13,13 @@ public class PCB
 
     public PCB()
     {
-        this.name = "Default";
+        this.name = 0;
         this.priority = 0;
         this.total_time = 0;
         this.cpu_time = 0;
         this.state = 'R';
     }
-    public PCB(String name, int priority, int total_time, int cpu_time, char status)
+    public PCB(int name, int priority, int total_time, int cpu_time, char status)
     {
         this.name = name;
         this.priority = priority;
@@ -28,11 +28,11 @@ public class PCB
         this.state = status;
     }
 
-    public String getName() {
+    public int getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(int name) {
         this.name = name;
     }
 
