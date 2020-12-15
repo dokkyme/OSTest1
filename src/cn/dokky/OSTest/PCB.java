@@ -6,7 +6,7 @@ public class PCB
     private int name;       //进程名
     private int priority;    //优先数
     private int total_time;  //进程需要运行的时间
-    private int cpu_time;    //占用CPU的时间
+    private int cpu_time;    //已经占用CPU的时间
     private char state;     //进程的状态 R(run运行) W(Wait等待) F(Finish完成)
 
 
