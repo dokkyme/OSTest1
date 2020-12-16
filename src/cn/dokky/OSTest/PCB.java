@@ -19,13 +19,13 @@ public class PCB
         this.cpu_time = 0;
         this.state = 'R';
     }
-    public PCB(int name, int priority, int total_time, int cpu_time, char status)
+    public PCB(int name, int priority, int total_time, int cpu_time, char state)
     {
         this.name = name;
         this.priority = priority;
         this.total_time = total_time;
         this.cpu_time = cpu_time;
-        this.state = status;
+        this.state = state;
     }
 
     public int getName() {
@@ -60,12 +60,17 @@ public class PCB
         this.cpu_time = cpu_time;
     }
 
-    public char getStatus() {
+    public char getState() {
         return state;
     }
 
-    public void setStatus(char status) {
+    public void setState(char status) {
         this.state = status;
+    }
+
+    public boolean isFinished()
+    {
+        return this.total_time == this.cpu_time;
     }
 
 }
